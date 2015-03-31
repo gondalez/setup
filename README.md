@@ -13,7 +13,7 @@ needs.
 To install, all you need to do is run `bootstrap.sh` remotely. It will install some pre-requisites (gcc,
 [Homebrew](http://brew.sh/), git, and [Ansible](http://docs.ansible.com/)) and will then clone this repo locally (by default it clones into `~/.setup`) and run the playbook:
 
-    $ curl -fsSL https://raw.githubusercontent.com/zacs/setup/master/bootstrap.sh | sh
+    $ curl -fsSL https://raw.githubusercontent.com/andrewmacgregor/setup/master/bootstrap.sh | sh
 
 If you prefer not to run code remotely, you just need to clone the repo down wherever you would like, and run:
 

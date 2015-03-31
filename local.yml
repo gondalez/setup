@@ -3,9 +3,4 @@
   roles:
     - homebrew
     - common
-    - zsh
     - python
-    - xcode
-    - terminal
-    - sublime
-    - slate

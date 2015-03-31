@@ -2,20 +2,29 @@
 - name: install CLI tools
   homebrew: name={{ item }} state=present
   with_items:
+    - gpg
     - git
+    - bash-completion
+    - postgres
+    - node
+    - geos
+    - libxslt
+    - libxml2
+    - graphicsmagick
+    - tesseract
+    - mdbtools
+    - v8
+    - markdown
+    - ag
     - s3cmd
     - brew-cask
     - wget
     - heroku-toolbelt
-    - hub
     - python
     - ruby
     - node
-    - archey
-    - the_platinum_searcher
     - brew-gem
     - brew-pip
-    - hub
     - imagemagick
     - yuicompressor
     - watchman
@@ -33,60 +42,32 @@
 - name: install binary casks
   homebrew_cask: name={{ item }} state=present
   with_items:
-    - 1password
-    - azure-cli
-    - adobe-creative-cloud
-    # - adobe-Photoshop-CS6 # no formula in caskroom/versions yet
-    - alfred
-    - archiver
-    - arq
-    - base
-    - beamer
+    - iterm2
+    - diffmerge
+    - postgres
+    - xquartz
+    - wkhtmltopdf
     - keepingyouawake
     - charles
-    - chromium
-    - cloak
-    - dnscrypt
-    - doxie
     - dropbox
-    - dropletmanager
     - flash
     - flux
-    - gitbox
-    - google-chrome-canary
-    - ios7-screensaver
     - istat-menus
-    - java
-    - kindlegen
-    - mailbox
-    - media-converter # could make its own role and clone the added presets i use
-    - openemu-experimental
-    - plug
-    - sequel-pro
-    - sidestep
-    - soulver
-    - spotify
-    - steam
-    - steermouse
-    - sublime-text3
-    - tagger
     - trailer
-    - transmission
-    - transmit
-    - unison # necessary?
     - vagrant
     - virtualbox
     - vlc
   when: ansible_os_family == 'Darwin'
 
+- name: install items dependent on xquartz
+  homebrew: name={{ item }} state=present
+  with_items:
+    - qt
+    - poppler
+  when: ansible_os_family == 'Darwin'
+
+
+
 - name: apply OS X for hackers settings
   script: osx
   when: ansible_os_family == 'Darwin'
-
-- name: create dirs
-  file: name={{ ansible_env.HOME }}/{{ item }} state=directory
-  with_items:
-    - 'Code'
-    - 'Code/scratch'
-
-# TODO: Add apt-get calls for Ubuntu
