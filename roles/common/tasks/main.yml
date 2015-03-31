@@ -34,12 +34,6 @@
 - name: install imagemagick
   homebrew: name=imagemagick state=present install_options=with-ghostscript
 
-- name: install prince
-  homebrew: name=https://raw.github.com/staticfloat/homebrew-alt/master/non-free/princexml.rb state=present
-
-- name: install zeromq22
-  homebrew: name=homebrew/versions/zeromq22 state=present
-
 - name: install gem tools
   gem: name={{ item }} state=present
   with_items:
@@ -51,7 +45,7 @@
   with_items:
     - iterm2
     - diffmerge
-    - postgres
+    #- postgres
     - xquartz
     - wkhtmltopdf
     - keepingyouawake
