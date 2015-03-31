@@ -70,8 +70,8 @@ defaults write com.apple.dock mouse-over-hilte-stack -bool true
 echo "Show indicator lights for open applications in the Dock"
 defaults write com.apple.dock show-process-indicators -bool true
 
-echo "Set dock hide time to 30 seconds"
-defaults write com.apple.dock autohide-time-modifier -int 30
+echo "Set dock hide time to 0.15 seconds"
+defaults write com.apple.dock autohide-time-modifier -float 0.15
 
 # Don’t animate opening applications from the Dock
 # defaults write com.apple.dock launchanim -bool false

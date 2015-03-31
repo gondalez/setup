@@ -48,16 +48,15 @@
     #- postgres
     - xquartz
     - wkhtmltopdf
-    - keepingyouawake
     - charles
     - dropbox
     - flash
     - flux
-    - istat-menus
+    #- istat-menus
     - trailer
     - vagrant
     - virtualbox
-    - vlc
+
   when: ansible_os_family == 'Darwin'
 
 - name: install items dependent on xquartz
