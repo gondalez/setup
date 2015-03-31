@@ -54,8 +54,6 @@
     - flux
     #- istat-menus
     - trailer
-    - vagrant
-    - virtualbox
 
   when: ansible_os_family == 'Darwin'
 
