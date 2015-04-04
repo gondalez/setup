@@ -42,13 +42,6 @@
 
   when: ansible_os_family == 'Darwin'
 
-- name: install emacs 24
-  homebrew: name=emacs install_options=cocoa
-
-- name: remove emacs that ships with OS X
-  script: emacs
-  when: ansible_os_family == 'Darwin'
-
 - name: apply OS X for hackers settings
   script: osx
   when: ansible_os_family == 'Darwin'

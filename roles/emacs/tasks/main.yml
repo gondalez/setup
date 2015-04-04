@@ -1,0 +1,10 @@
+---
+- name: install emacs 24
+  homebrew: name=emacs install_options=cocoa
+
+- name: remove emacs that ships with OS X
+  script: remove-preinstalled
+  when: ansible_os_family == 'Darwin'
+
+- name: install prelude
+  script: prelude
