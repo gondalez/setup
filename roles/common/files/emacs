@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+echo "Info   | Link     | emacs 24"
+ln -Fs /usr/local/Cellar/emacs/24.?/Emacs.app /Applications
+
+
+if [[ -a /usr/bin/emacs ]]; then
+    echo "Info   | Remove     | /usr/bin/emacs"
+	sudo rm /usr/bin/emacs
+fi
+
+if [[ -d /usr/share/emacs ]]; then
+    echo "Info   | Remove     | /usr/share/emacs "
+	sudo rm -rf /usr/share/emacs
+fi
