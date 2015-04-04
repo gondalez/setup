@@ -1,2 +1,6 @@
-echo "Info   | Install     | bbatsov/prelude"
-curl -L http://git.io/epre | sh
+#!/usr/bin/env sh
+
+if [[ ! -d /Users/gondalez/.emacs.d/ ]]; then
+   echo "Info   | Install     | bbatsov/prelude"
+   curl -L http://git.io/epre | sh
+fi

@@ -8,3 +8,13 @@
 
 - name: install prelude
   script: prelude
+
+- name: copy personal.el
+  copy: >
+    dest=~/.emacs.d/personal/personal.el
+    src=personal.el
+
+- name: copy prelude-modules.el
+  copy: >
+    dest=~/.emacs.d/prelude-modules.el
+    src=prelude-modules.el
