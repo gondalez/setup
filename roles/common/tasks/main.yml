@@ -39,6 +39,7 @@
     - flux
     - istat-menus
     - trailer
+    - moom
 
   when: ansible_os_family == 'Darwin'
 
