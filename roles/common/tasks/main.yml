@@ -16,12 +16,14 @@
     - ruby
     - rbenv
     - ruby-build
+    - pow
     - brew-gem
     - brew-pip
     - yuicompressor
     - watchman
     - ffmpeg
     - youtube-dl
+    - htop
   when: ansible_os_family == 'Darwin'
 
 - name: install gem tools
