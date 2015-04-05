@@ -3,6 +3,7 @@
   homebrew: name={{ item }} state=present
   with_items:
     - gpg
+    - ssh-copy-id
     - git
     - node
     - markdown
@@ -25,6 +26,7 @@
   gem: name={{ item }} state=present
   with_items:
     - kramdown
+    - powder
   when: ansible_os_family == 'Darwin'
 
 - name: install binary casks
