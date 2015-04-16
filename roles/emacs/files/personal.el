@@ -28,5 +28,8 @@
 ;;; time tracking
 (global-wakatime-mode)
 
+;;; tabs (are evil)
+(setq-default tab-width 2)
+
 (provide 'personal)
 ;;; personal.el ends here
