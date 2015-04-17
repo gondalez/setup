@@ -20,10 +20,14 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 
-;;; web mode indentation
+;;; web mode
+(setq-default tab-width 2)
 (setq web-mode-markup-indent-offset 2)
 (setq web-mode-css-indent-offset 2)
 (setq web-mode-code-indent-offset 2)
+
+;;; magit
+(setq magit-status-buffer-switch-function 'switch-to-buffer) ;;; full size stat
 
 ;;; time tracking
 (global-wakatime-mode)
