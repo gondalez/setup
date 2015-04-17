@@ -15,6 +15,7 @@
     - python
     - ruby
     - rbenv
+    - rbenv-bundler
     - ruby-build
     - pow
     - brew-gem
@@ -26,11 +27,15 @@
     - htop
   when: ansible_os_family == 'Darwin'
 
+- name: configure CLI tools
+  script: configure-cli
+
 - name: install gem tools
   gem: name={{ item }} state=present
   with_items:
     - kramdown
     - powder
+    - bundler
   when: ansible_os_family == 'Darwin'
 
 - name: install binary casks
