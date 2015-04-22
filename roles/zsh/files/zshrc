@@ -47,7 +47,6 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 
 alias emacs="/usr/local/Cellar/emacs/24.?/Emacs.app/Contents/MacOS/Emacs -nw"
-alias confstore="cp ~/.emacs.d/personal/personal.el ~/.setup/roles/emacs/files/personal.el && cp ~/.zshrc ~/.setup/roles/zsh/files/zshrc"
 
 # findstr: find non-case-sens strings in current dir, recursive
 function findstr() {
