@@ -35,5 +35,8 @@
 ;;; tabs (are evil)
 (setq-default tab-width 2)
 
+;; disable company mode (COMplete ANYwhere) auto complete
+(setq global-company-mode 0)
+
 (provide 'personal)
 ;;; personal.el ends here
