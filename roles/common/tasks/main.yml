@@ -51,6 +51,9 @@
     - istat-menus
     - trailer
     - moom
+    - virtualbox
+    - vagrant
+    - vagrant-manager
 
   when: ansible_os_family == 'Darwin'
 
