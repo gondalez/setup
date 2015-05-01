@@ -15,7 +15,6 @@
     - python
     - ruby
     - rbenv
-    - rbenv-bundler
     - ruby-build
     - pow
     - brew-gem

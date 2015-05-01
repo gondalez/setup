@@ -1,4 +1,3 @@
 #!/usr/bin/env sh
 
-# enable bundler plugin for rbenv
-rbenv bundler on
+# reserved for future use ;)

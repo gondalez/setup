@@ -46,6 +46,10 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
+# Easy execution of binstubs
+PATH=./bin:$PATH
+
+
 alias emacs="/usr/local/Cellar/emacs/24.?/Emacs.app/Contents/MacOS/Emacs -nw"
 
 # findstr: find non-case-sens strings in current dir, recursive
